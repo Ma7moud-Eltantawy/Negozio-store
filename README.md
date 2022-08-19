@@ -2,7 +2,7 @@
 
 NEGOZIO STORE APPLICATION.
 
-## Getting Started
+## About application
 
 A small attempt to make an e-commerce application in Flutter for Android and iOS.
 
