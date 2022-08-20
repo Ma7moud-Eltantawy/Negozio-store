@@ -62,32 +62,34 @@ class Auth_prov with ChangeNotifier {
       print(response.reasonPhrase);
     }
   }
-  Future <void> Signup({required String name, required String email, required String password,required File imgfile,
+  Future <usermodel> Signup({required String name, required String email, required String password,required File imgfile,
    required String phone}) async
   {
     progress_state = true;
     File profileImage = File(imgfile.path);
     List<int> imageBytes = profileImage.readAsBytesSync();
     String base64Image = base64Encode(imageBytes);
+    print(base64Image);
 
     var headers = {
       'lang': 'en',
       'Content-Type': 'application/json'
     };
-    var request = http.MultipartRequest(
-        'POST', Uri.parse('https://student.valuxapps.com/api/register'));
-    request.fields.addAll({
-      "name": "$name",
-      "phone": "$phone",
-      "email": "$email",
-      "password": "$email",
-      'image':base64Image,
+    var request = http.Request('POST', Uri.parse('https://student.valuxapps.com/api/register'));
+    request.body = json.encode({
+      "name": name,
+      "phone": phone,
+      "email": email,
+      "password": password,
+      "image":  base64Image,
     });
-
     request.headers.addAll(headers);
     http.StreamedResponse response = await request.send();
+    var res = await http.Response.fromStream(response);
+    print(res.body);
 
     if (response.statusCode == 200) {
+
       var res = await http.Response.fromStream(response);
 
       User_data = usermodel.fromJson(json.decode(res.body));
@@ -100,10 +102,13 @@ class Auth_prov with ChangeNotifier {
       authjson = json.decode(res.body);
 
 
+
       notifyListeners();
+      return  User_data!;
     }
     else {
       print(response.reasonPhrase);
+      return usermodel();
     }
   }
   String sunamemsg="";
