@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "281748412522",
+    "project_id": "nogozio",
+    "storage_bucket": "nogozio.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:281748412522:android:9e08f76481d1b77e899213",
+        "android_client_info": {
+          "package_name": "com.example.negozio_store"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "281748412522-fgp7j1vc3mr53nd4srsg5l1np66oaien.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAasLcw9VjTHVxf7VO9Bm_6xkIZRHbaiTQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "281748412522-fgp7j1vc3mr53nd4srsg5l1np66oaien.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:281748412522:android:c4f2b5dfe86651ae899213",
+        "android_client_info": {
+          "package_name": "com.example.notfication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "281748412522-fgp7j1vc3mr53nd4srsg5l1np66oaien.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAasLcw9VjTHVxf7VO9Bm_6xkIZRHbaiTQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "281748412522-fgp7j1vc3mr53nd4srsg5l1np66oaien.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
